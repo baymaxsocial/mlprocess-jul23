@@ -1,0 +1,24 @@
+name: experiment
+
+# dataset define (breast-cancer-wisconsin.data)
+dataset:
+  path: ../data/breast-cancer-wisconsin.data
+  columns: ['id', 'clump_thickness', 'uniform_cell_size', 'uniform_cell_shape', 'marginal_adhesion', 'single_epithelial_size', 'bare_nuclei', 'bland_chromatin', 'normal_nucleoli', 'mitoses', 'class']
+  unnecessary_columns: ['id']
+  target_column: 'class'
+  test_size: 0.2
+  random_state: 42
+
+# model define
+model:
+  name: KNeighborsClassifier
+  params:
+    n_neighbors: 5
+    weights: uniform
+    algorithm: auto
+    leaf_size: 30
+    p: 1
+    metric: minkowski
+    n_jobs: -1
+  output:
+    name: KNN_classifier_baru.pkl

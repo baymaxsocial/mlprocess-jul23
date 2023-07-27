@@ -1,0 +1,16 @@
+# Description and scope of project
+name: ML PROCESS EZ
+version: 2.5.0
+
+# DataSource Path
+data:
+    input: config.yaml
+    columns: 
+        x_label: 1
+
+# Model ML
+epoch: 20
+learning_rate: 1e5
+dropout: 0.2
+# learning_rate or LearningRate or learning-rate
+ages: [2,3,4,5]
